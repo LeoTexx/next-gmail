@@ -47,6 +47,7 @@ const App = (): JSX.Element => {
     (async function () {
       if (status === "authenticated") {
         //This value will always exist
+        // @ts-ignore
         const mails = await getMails(data.accessToken);
         setEmails(mails);
       }

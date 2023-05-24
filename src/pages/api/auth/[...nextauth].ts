@@ -28,6 +28,7 @@ export default NextAuth({
     },
     async session({ session, token }) {
       // Add custom accessToken
+      // @ts-ignore
       session.accessToken = token.accessToken;
       return session;
     },
